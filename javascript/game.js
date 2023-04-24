@@ -13,6 +13,14 @@ $(document).keypress(() => {
     }
 })
 
+
+$(document).click(() => {
+    if (gameStarted === false) {
+        gameStarted = true;
+        nextSequence();
+    }
+})
+
 $('.btn').click(function () {
     var userChosenColor = $(this).attr('id');
     userClickedPattern.push(userChosenColor);
